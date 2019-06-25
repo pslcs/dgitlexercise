@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.hidden{
+  display: none;
+}
+#overlay{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.63);
+}
+#overlay-content{
+  padding-top: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  height: 200px;
+  top: calc(50vh - 100px);
+  width: 300px;
+  left: calc(50vw - 150px);
+  background-color: white;
+  color: black;
+}
+a{
+  text-decoration: none;
+}
