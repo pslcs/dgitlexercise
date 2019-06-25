@@ -1,31 +1,13 @@
-{
-    "posts": [
-      {
-        "id": 1,
-        "title": "Post 1"
-      },
-      {
-        "id": 2,
-        "title": "Post 2"
-      },
-      {
-        "id": 3,
-        "title": "Post 3"
-      }
-    ],
-    "comments": [
-      {
-        "id": 1,
-        "body": "some comment",
-        "postId": 1
-      },
-      {
-        "id": 2,
-        "body": "some comment",
-        "postId": 1
-      }
-    ],
-    "profile": {
-      "name": "typicode"
+{   
+    "call1": {
+        "val1": 5,
+        "val2": 3
+    },
+    "5": {
+        "val3": 14,
+        "val4": 9
+    },
+    "3": {
+        "val5": 21
     }
   }

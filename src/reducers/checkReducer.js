@@ -3,6 +3,7 @@ export default (state = {}, action) => {
         if (action.length > 0 && action.length < 11){
             return {
                 disabled: false,
+                payload: action.payload,
                 error: 'You can click the button now'
             }
         } else {

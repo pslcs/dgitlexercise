@@ -7,7 +7,6 @@ import { simpleAction } from './actions/simpleAction';
 import { checkInput } from './actions/checkInput';
 
 
-var fetchLocation = 'hhtp://www.šulcas.lt'
 class App extends Component {
   simpleAction = (event) => {
     //this.props.simpleAction();
@@ -15,16 +14,23 @@ class App extends Component {
   checkInput = (event) => {
     this.props.checkInput(event.target.value);
   }
-  async call1() {
-    fetch(fetchLocation, {
-      method: 'GET'
-    })
-  }
-  call2 = () => {
-
-  }
-  call3 = () => {
-
+  async call1() { 
+    let fetchLocation = 'http://fubar.com/person/' + this.props.checkReducer.payload; // I was not able to create an API with so much data, but this is how I would do it
+    fetch('https://my-json-server.typicode.com/pslcs/dgitlexercise/call1', { // calling a different url to obtain two values
+      method: 'PUT',
+      headers: {
+          'Content-Type': 'application/json'
+        }
+    }).then(res => {
+        if(res.ok){
+          console.log(res)
+          //return res.json()
+        } else {
+          throw Error(res.statusText)
+        }
+      }
+    ).then(data =>
+      console.log(data))
   }
   render() {
     return (
